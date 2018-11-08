@@ -150,13 +150,13 @@
     if (plugins.rdMailForm.length) {
       var i, j, k,
         msg = {
-          'MF000': 'Successfully sent!',
-          'MF001': 'Recipients are not set!',
-          'MF002': 'Form will not work locally!',
-          'MF003': 'Please, define email field in your form!',
-          'MF004': 'Please, define type of your form!',
-          'MF254': 'Something went wrong with PHPMailer!',
-          'MF255': 'Aw, snap! Something went wrong.'
+          'MF000': 'Письмо успешно отправлено!',
+          'MF001': 'Список получателей пуст!',
+          'MF002': 'Отправка не работает локально!',
+          'MF003': 'Пожалуйста, укажите Ваш e-mail!',
+          'MF004': 'Пожалуйста, укажите тип формы!',
+          'MF254': 'Что-то пошло не так с PHPmailer :(',
+          'MF255': 'Что-то пошло не так :('
         };
 
       for (i = 0; i < plugins.rdMailForm.length; i++) {
@@ -186,8 +186,8 @@
               if(captcha.length) {
                 var captchaToken = captcha.find('.g-recaptcha-response').val(),
                   captchaMsg = {
-                    'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-                    'CPT002': 'Something wrong with google reCaptcha'
+                    'CPT001': 'Пожалуйста, установите "site key" и "secret key" для reCaptcha',
+                    'CPT002': 'Что-то пошло не так с google reCaptcha'
                   };
 
                 formHasCaptcha = true;
