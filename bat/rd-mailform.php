@@ -3,7 +3,7 @@
 $formConfigFile = file_get_contents("rd-mailform.config.json");
 $formConfig = json_decode($formConfigFile, true);
 
-date_default_timezone_set('Etc/UTC');
+//date_default_timezone_set('Etc/UTC');
 
 try {
     require './phpmailer/PHPMailerAutoload.php';
@@ -25,11 +25,13 @@ try {
         }
         return $_SERVER['REMOTE_ADDR'];
     }
-
+    
+/*
     if (preg_match('/^(127\.|192\.168\.)/', getRemoteIPAddress())) {
         die('MF002');
     }
-
+*/
+    
     $template = file_get_contents('rd-mailform.tpl');
 
     if (isset($_POST['form-type'])) {
